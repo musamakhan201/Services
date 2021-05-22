@@ -31,9 +31,12 @@ public class SeoRequestDomain {
     @JsonProperty("website_url")
     @Column(name = "website_url")
     private String websiteUrl;
-    @JsonProperty("website_creditional")
-    @Column(name = "website_creditional")
-    private String websiteCreditional;
+    @JsonProperty("login_username")
+    @Column(name = "login_username")
+    private String loginUsername;
+    @JsonProperty("login_password")
+    @Column(name = "login_password")
+    private String loginPassword;
     private String keywords;
     @Column(columnDefinition="DATETIME")
     private String time;

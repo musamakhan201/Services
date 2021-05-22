@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SeoRequestRepository extends JpaRepository<SeoRequestDomain,Integer> {
+    SeoRequestDomain findById(int id);
 }

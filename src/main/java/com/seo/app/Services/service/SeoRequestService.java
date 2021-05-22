@@ -30,4 +30,5 @@ public class SeoRequestService {
     public Iterable<SeoRequestDomain> getRequests() {
         return seoRequestRepository.findAll();
     }
+
 }
