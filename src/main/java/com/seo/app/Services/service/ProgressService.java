@@ -37,7 +37,10 @@ public class ProgressService {
         ArrayList<ProgressDto> progressList = new ArrayList<>();
         for(int i=0;i<progressDomain.size();i++)
         {
-            ProgressDto progressDto=objectMapper.convertValue(progressDomain.get(i),ProgressDto.class);
+            ProgressDto progressDto=new ProgressDto();
+            progressDto.setPercentage(progressDomain.get(i).getPercentage());
+            progressDto.setUser(progressDomain.get(i).getUser());
+            progressDto.set_time(progressDomain.get(i).getTime());
             progressList.add(progressDto);
             log.info(progressList.toString());
         }

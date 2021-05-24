@@ -25,10 +25,11 @@ public class AdminNotificationDomain {
     @JsonProperty("notification_id")
     @Column(name = "notification_id")
     private int notificationId;
-    private String user;
+    private int user;
     private String title;
     private String body;
     private String date_time;
+    private boolean status;
     public AdminNotificationDomain() {
         ZonedDateTime utc = ZonedDateTime.now(ZoneOffset.UTC);
         date_time = utc.format(DateTimeFormatter.ofPattern(DATETIME_FORMAT));

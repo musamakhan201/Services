@@ -90,6 +90,18 @@ public class Controller {
         return adminNotificationService.showNotification(id);
     }
 
+    @RequestMapping(value = "/admin/seen", method = RequestMethod.POST)
+    public String setSeen(@RequestParam(value = "user") int id){
+        log.info("POST Call received at Notification/Notification to User" + id);
+        return adminNotificationService.seen(id);
+    }
+
+    @RequestMapping(value = "/user/seen", method = RequestMethod.POST)
+    public String userSeen(@RequestParam(value = "user") int id){
+        log.info("POST Call received at Notification/Notification to User" + id);
+        return userNotificationService.seen(id);
+    }
+
     @RequestMapping(value = "/user/view/notification",method = RequestMethod.GET)
     public Iterable<UserNotificationDomain> getNotifications(){
         return userNotificationService.getNotifications();

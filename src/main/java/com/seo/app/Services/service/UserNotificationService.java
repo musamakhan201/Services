@@ -31,4 +31,14 @@ public class UserNotificationService {
     public Iterable<UserNotificationDomain> getNotifications() {
         return userNotificationRepository.findAll();
     }
+
+    public String seen(int id)
+    {
+        UserNotificationDomain notificationDomain=userNotificationRepository.findByUser(id);
+        notificationDomain.setStatus(true);
+        userNotificationRepository.save(notificationDomain);
+        String responseMessage = "Seen";
+        log.info(responseMessage);
+        return responseMessage;
+    }
 }

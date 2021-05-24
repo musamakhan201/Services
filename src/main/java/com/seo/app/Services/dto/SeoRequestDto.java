@@ -17,6 +17,6 @@ public class SeoRequestDto {
     private String deadline;
     private String additional_comment;
     private String keywords;
-    private String _time;
+    private String time;
     private int user;
 }

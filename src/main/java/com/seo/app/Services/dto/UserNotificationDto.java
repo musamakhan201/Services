@@ -9,7 +9,8 @@ import lombok.*;
 @NoArgsConstructor
 public class UserNotificationDto {
     private int notificationId;
-    private String user;
+    private int user;
     private String title;
     private String body;
+    private boolean status;
 }

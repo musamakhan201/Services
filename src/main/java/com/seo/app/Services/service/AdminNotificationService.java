@@ -37,10 +37,25 @@ public class AdminNotificationService {
         ArrayList<AdminNotificationDto> list = new ArrayList<>();
         for(int i=0;i<requestDomains.size();i++)
         {
-            AdminNotificationDto adminNotificationDto=objectMapper.convertValue(requestDomains,AdminNotificationDto.class);
+            AdminNotificationDto adminNotificationDto=new AdminNotificationDto();
+            adminNotificationDto.setTitle(requestDomains.get(i).getTitle());
+            adminNotificationDto.setBody(requestDomains.get(i).getBody());
+            adminNotificationDto.setTime(requestDomains.get(i).getDate_time());
+            adminNotificationDto.setUser(requestDomains.get(i).getUser());
+            adminNotificationDto.setStatus(requestDomains.get(i).isStatus());
             list.add(adminNotificationDto);
             log.info(list.toString());
         }
         return list;
+    }
+
+    public String seen(int id)
+    {
+        AdminNotificationDomain adminNotificationDomain=adminNotificationRepository.findByUser(id);
+        adminNotificationDomain.setStatus(true);
+        adminNotificationRepository.save(adminNotificationDomain);
+        String responseMessage = "Seen";
+        log.info(responseMessage);
+        return responseMessage;
     }
 }

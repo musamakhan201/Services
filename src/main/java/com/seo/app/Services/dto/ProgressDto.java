@@ -8,7 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ProgressDto {
-    private int progressId;
+    private int progress_id;
     private String percentage;
     private int user;
     private String _time;
