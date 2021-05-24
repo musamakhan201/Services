@@ -40,6 +40,7 @@ public class ProgressService {
             ProgressDto progressDto=new ProgressDto();
             progressDto.setPercentage(progressDomain.get(i).getPercentage());
             progressDto.setId(progressDomain.get(i).getId());
+            progressDto.setTime(progressDomain.get(i).getTime());
             log.info(progressDto.toString());
             progressList.add(progressDto);
             log.info(progressList.toString());
