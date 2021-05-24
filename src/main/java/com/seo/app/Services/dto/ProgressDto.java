@@ -11,5 +11,5 @@ public class ProgressDto {
     private int progressId;
     private String percentage;
     private int user;
-    private String time;
+    private String _time;
 }
