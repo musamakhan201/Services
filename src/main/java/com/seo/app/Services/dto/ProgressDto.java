@@ -10,6 +10,6 @@ import lombok.*;
 public class ProgressDto {
     private int progressId;
     private String percentage;
-    private int id;
-    private String _time;
+    private int user;
+    private String time;
 }

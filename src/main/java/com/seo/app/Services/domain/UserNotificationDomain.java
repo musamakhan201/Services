@@ -16,28 +16,21 @@ import java.time.format.DateTimeFormatter;
 @Setter
 @Entity
 @AllArgsConstructor
-@Table(name = "service_done")
-public class DoneServiceDomain {
+@Table(name = "user_notifications")
+public class UserNotificationDomain {
     private static final String DATETIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JsonProperty("seo_id")
-    @Column(name = "seo_id")
-    private int seoId;
-    @JsonProperty("website_name")
-    @Column(name = "website_name")
-    private String websiteName;
-    @JsonProperty("website_url")
-    @Column(name = "website_url")
-    private String websiteUrl;
-    @Column(columnDefinition="DATETIME")
-    private String time;
-    private String guidance;
-    private int user;
-
-    public DoneServiceDomain() {
+    @JsonProperty("notification_id")
+    @Column(name = "notification_id")
+    private int notificationId;
+    private String user;
+    private String title;
+    private String body;
+    private String current_time;
+    public UserNotificationDomain() {
         ZonedDateTime utc = ZonedDateTime.now(ZoneOffset.UTC);
-        time = utc.format(DateTimeFormatter.ofPattern(DATETIME_FORMAT));
+        current_time = utc.format(DateTimeFormatter.ofPattern(DATETIME_FORMAT));
     }
 }

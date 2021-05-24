@@ -12,5 +12,5 @@ public class DoneServiceDto {
     private String website_name;
     private String website_url;
     private String guidance;
-    private int id;
+    private int user;
 }

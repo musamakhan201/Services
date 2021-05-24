@@ -26,7 +26,7 @@ public class ProgressDomain {
     @Column(name = "progress_id")
     private int progressId;
     private String percentage;
-    private int id;
+    private int user;
     @Column(columnDefinition="DATETIME")
     private String time;
 

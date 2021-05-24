@@ -32,16 +32,12 @@ public class ProgressService {
     }
 
     public List<ProgressDto> getProgress(int id){
-        List<ProgressDomain> progressDomain=progressRepository.findAllById(id);
+        List<ProgressDomain> progressDomain=progressRepository.findAllByUser(id);
         log.info(progressDomain.toString());
         ArrayList<ProgressDto> progressList = new ArrayList<>();
         for(int i=0;i<progressDomain.size();i++)
         {
-            ProgressDto progressDto=new ProgressDto();
-            progressDto.setPercentage(progressDomain.get(i).getPercentage());
-            progressDto.setId(progressDomain.get(i).getId());
-            progressDto.set_time(progressDomain.get(i).getTime());
-            log.info(progressDto.toString());
+            ProgressDto progressDto=objectMapper.convertValue(progressDomain.get(i),ProgressDto.class);
             progressList.add(progressDto);
             log.info(progressList.toString());
         }

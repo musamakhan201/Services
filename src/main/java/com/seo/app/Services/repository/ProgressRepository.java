@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface ProgressRepository extends JpaRepository<ProgressDomain,Integer> {
-   List<ProgressDomain> findAllById(int id);
+   List<ProgressDomain> findAllByUser(int id);
 }

@@ -16,5 +16,7 @@ public class SeoRequestDto {
     private String login_password;
     private String deadline;
     private String additional_comment;
-    private int id;
+    private String keywords;
+    private String time;
+    private int user;
 }

@@ -46,7 +46,7 @@ public class SeoRequestDomain {
     @JsonProperty("additional_comment")
     @Column(name = "additional_comment")
     private String additionalComment;
-    private int id;
+    private int user;
 
     public SeoRequestDomain() {
         ZonedDateTime utc = ZonedDateTime.now(ZoneOffset.UTC);

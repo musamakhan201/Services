@@ -33,7 +33,7 @@ public class DoneService {
         DoneServiceDto doneServiceDto=new DoneServiceDto();
         doneServiceDto.setWebsite_name(doneServiceDomain.getWebsiteName());
         doneServiceDto.setWebsite_url(doneServiceDomain.getWebsiteUrl());
-        doneServiceDto.setId(doneServiceDomain.getId());
+        doneServiceDto.setUser(doneServiceDomain.getUser());
         doneServiceDto.setGuidance(doneServiceDomain.getGuidance());
         return doneServiceDto;
     }

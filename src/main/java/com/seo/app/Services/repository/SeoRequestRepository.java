@@ -4,7 +4,9 @@ import com.seo.app.Services.domain.SeoRequestDomain;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface SeoRequestRepository extends JpaRepository<SeoRequestDomain,Integer> {
-    SeoRequestDomain findById(int id);
+    List<SeoRequestDomain> findAllByUser(int id);
 }
