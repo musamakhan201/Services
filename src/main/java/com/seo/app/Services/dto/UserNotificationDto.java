@@ -12,5 +12,4 @@ public class UserNotificationDto {
     private String user;
     private String title;
     private String body;
-    private String date_time;
 }
