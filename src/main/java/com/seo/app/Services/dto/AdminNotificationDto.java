@@ -12,5 +12,5 @@ public class AdminNotificationDto {
     private String user;
     private String title;
     private String body;
-    private String current_time;
+    private String date_time;
 }

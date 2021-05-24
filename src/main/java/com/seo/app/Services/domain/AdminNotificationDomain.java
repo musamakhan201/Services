@@ -28,9 +28,9 @@ public class AdminNotificationDomain {
     private String user;
     private String title;
     private String body;
-    private String current_time;
+    private String date_time;
     public AdminNotificationDomain() {
         ZonedDateTime utc = ZonedDateTime.now(ZoneOffset.UTC);
-        current_time = utc.format(DateTimeFormatter.ofPattern(DATETIME_FORMAT));
+        date_time = utc.format(DateTimeFormatter.ofPattern(DATETIME_FORMAT));
     }
 }
