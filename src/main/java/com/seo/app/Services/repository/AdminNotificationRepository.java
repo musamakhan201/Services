@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface AdminNotificationRepository extends JpaRepository<AdminNotificationDomain, Integer> {
     List<AdminNotificationDomain> findAllByUser(int id);
-    AdminNotificationDomain findByUser(int id);
+    AdminNotificationDomain findById(int id);
 }

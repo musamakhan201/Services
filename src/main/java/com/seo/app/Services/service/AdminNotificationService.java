@@ -38,6 +38,7 @@ public class AdminNotificationService {
         for(int i=0;i<requestDomains.size();i++)
         {
             AdminNotificationDto adminNotificationDto=new AdminNotificationDto();
+            adminNotificationDto.setNotificationId(requestDomains.get(i).getNotificationId());
             adminNotificationDto.setTitle(requestDomains.get(i).getTitle());
             adminNotificationDto.setBody(requestDomains.get(i).getBody());
             adminNotificationDto.setTime(requestDomains.get(i).getDate_time());
@@ -51,7 +52,7 @@ public class AdminNotificationService {
 
     public String seen(int id)
     {
-        AdminNotificationDomain adminNotificationDomain=adminNotificationRepository.findByUser(id);
+        AdminNotificationDomain adminNotificationDomain=adminNotificationRepository.findById(id);
         adminNotificationDomain.setStatus(true);
         adminNotificationRepository.save(adminNotificationDomain);
         String responseMessage = "Seen";

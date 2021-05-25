@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserNotificationRepository extends JpaRepository<UserNotificationDomain, Integer> {
-    UserNotificationDomain findByUser(int id);
+    UserNotificationDomain findById(int id);
 }

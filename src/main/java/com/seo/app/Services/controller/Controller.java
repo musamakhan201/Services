@@ -54,6 +54,12 @@ public class Controller {
         return seoRequestService.viewRequests(id);
     }
 
+    @RequestMapping(value = "/delete/request", method = RequestMethod.POST)
+    public String deleteRequests(@RequestParam(value = "id") int id){
+        log.info("POST Call received at User/requests to User" + id);
+        return seoRequestService.delete(id);
+    }
+
     @RequestMapping(value = "/show/progress", method = RequestMethod.POST)
     public List<ProgressDto> showProgress(@RequestParam(value = "user") int id){
         log.info("POST Call received at Progress/progress to User" + id);

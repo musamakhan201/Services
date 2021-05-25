@@ -34,7 +34,7 @@ public class UserNotificationService {
 
     public String seen(int id)
     {
-        UserNotificationDomain notificationDomain=userNotificationRepository.findByUser(id);
+        UserNotificationDomain notificationDomain=userNotificationRepository.findById(id);
         notificationDomain.setStatus(true);
         userNotificationRepository.save(notificationDomain);
         String responseMessage = "Seen";

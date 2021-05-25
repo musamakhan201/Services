@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface SeoRequestRepository extends JpaRepository<SeoRequestDomain,Integer> {
     List<SeoRequestDomain> findAllByUser(int id);
+    SeoRequestDomain findById(int id);
 }
