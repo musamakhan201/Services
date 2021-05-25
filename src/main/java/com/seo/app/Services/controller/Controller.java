@@ -74,7 +74,7 @@ public class Controller {
     }
 
     @RequestMapping(value = "/done/seo", method = RequestMethod.POST)
-    public DoneServiceDto showSeo(@RequestParam(value = "user") int id){
+    public List<DoneServiceDto> showSeo(@RequestParam(value = "user") int id){
         log.info("POST Call received at Seo/seo to User" + id);
         return doneService.done(id);
     }
