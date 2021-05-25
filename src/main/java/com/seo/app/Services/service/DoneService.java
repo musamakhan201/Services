@@ -29,12 +29,16 @@ public class DoneService {
     }
 
     public DoneServiceDto done(int id){
-        DoneServiceDomain doneServiceDomain=doneServiceRepository.findById(id);
+        DoneServiceDomain doneServiceDomain=doneServiceRepository.findByUser(id);
         DoneServiceDto doneServiceDto=new DoneServiceDto();
         doneServiceDto.setWebsite_name(doneServiceDomain.getWebsiteName());
         doneServiceDto.setWebsite_url(doneServiceDomain.getWebsiteUrl());
         doneServiceDto.setUser(doneServiceDomain.getUser());
         doneServiceDto.setGuidance(doneServiceDomain.getGuidance());
         return doneServiceDto;
+    }
+
+    public Iterable<DoneServiceDomain> getDone() {
+        return doneServiceRepository.findAll();
     }
 }

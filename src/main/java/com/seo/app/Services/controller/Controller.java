@@ -1,5 +1,6 @@
 package com.seo.app.Services.controller;
 
+import com.seo.app.Services.domain.DoneServiceDomain;
 import com.seo.app.Services.domain.SeoRequestDomain;
 import com.seo.app.Services.domain.UserNotificationDomain;
 import com.seo.app.Services.dto.*;
@@ -76,6 +77,11 @@ public class Controller {
     public DoneServiceDto showSeo(@RequestParam(value = "user") int id){
         log.info("POST Call received at Seo/seo to User" + id);
         return doneService.done(id);
+    }
+
+    @RequestMapping(value = "/show/done",method = RequestMethod.GET)
+    public Iterable<DoneServiceDomain> getAllDone(){
+        return doneService.getDone();
     }
 
     @PostMapping(path = "/admin/notify")

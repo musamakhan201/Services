@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DoneServiceRepository extends JpaRepository<DoneServiceDomain, Integer> {
-    DoneServiceDomain findById(int id);
+    DoneServiceDomain findByUser(int id);
 }
