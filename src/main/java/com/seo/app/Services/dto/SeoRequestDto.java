@@ -18,5 +18,10 @@ public class SeoRequestDto {
     private String additional_comment;
     private String keywords;
     private String _time;
+    private String url;
+    private String hostName;
+    private String hostPassword;
+    private String type;
     private int user;
+
 }

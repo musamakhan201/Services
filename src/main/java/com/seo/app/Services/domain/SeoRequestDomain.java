@@ -38,7 +38,7 @@ public class SeoRequestDomain {
     @Column(name = "login_password")
     private String loginPassword;
     private String keywords;
-    @Column(columnDefinition="DATETIME")
+    @Column(columnDefinition = "DATETIME")
     private String time;
     @JsonProperty("deadline")
     @Column(name = "deadline")
@@ -47,6 +47,16 @@ public class SeoRequestDomain {
     @Column(name = "additional_comment")
     private String additionalComment;
     private int user;
+    @Column(name = "type")
+    private String type;
+    @Column(name = "url")
+    private String url;
+    @JsonProperty("host_name")
+    @Column(name = "host_name")
+    private String hostName;
+    @JsonProperty("host_password")
+    @Column(name = "host_password")
+    private String hostPassword;
 
     public SeoRequestDomain() {
         ZonedDateTime utc = ZonedDateTime.now(ZoneOffset.UTC);
