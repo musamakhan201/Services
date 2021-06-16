@@ -52,8 +52,8 @@ public class SeoRequestService {
             requestDto.set_time(requestDomains.get(i).getTime());
             requestDto.setType(requestDomains.get(i).getType());
             requestDto.setUrl(requestDomains.get(i).getUrl());
-            requestDto.setHostName(requestDomains.get(i).getHostName());
-            requestDto.setHostPassword(requestDomains.get(i).getHostPassword());
+            requestDto.setHost_name(requestDomains.get(i).getHostName());
+            requestDto.setHost_password(requestDomains.get(i).getHostPassword());
 
             log.info(requestDto.toString());
             list.add(requestDto);
