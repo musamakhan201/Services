@@ -19,8 +19,8 @@ public class SeoRequestDto {
     private String keywords;
     private String _time;
     private String url;
-    private String hostName;
-    private String hostPassword;
+    private String host_name;
+    private String host_password;
     private String type;
     private int user;
 
